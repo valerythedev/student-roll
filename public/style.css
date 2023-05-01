@@ -1,0 +1,9 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background-color: rgb(3, 73, 73);
+  color: rgb(252, 202, 0);
+}
+img{
+  height: 200px;
+}
