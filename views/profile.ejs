@@ -51,11 +51,11 @@
               <tbody class="peoples-list">
                 <% for(var i=0; i<messages.length; i++) { %>
                   <tr class="tabla">
-                    <td><%= messages[i].firstName %></td>
-                    <td><%= messages[i].lastName %></td>
-                    <td><%= messages[i].roll %></td>
+                    <td contenteditable="true" class="<%= messages[i].firstName %>"><%= messages[i].firstName %></td>
+                    <td contenteditable="true" class="<%= messages[i].lastName %>"><%= messages[i].lastName %></td>
+                    <td contenteditable="true" class="<%= messages[i].roll %>"><%= messages[i].roll %></td>
                     <td>
-                      <a href="" class="btn-warning btn sm-edit">Edit</a>
+                      <a href="" class="btn-warning btn sm-save">Save</a>
                       <a href="" class="btn-warning btn sm-delete">Delete</a>
                     </td>
                   </tr>

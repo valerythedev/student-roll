@@ -36,11 +36,11 @@ module.exports = function(app, passport, db) {
       })
     })
 
-    app.put('/messages/:id', (req, res) => {
+    app.put('/messages/save', (req, res) => {
       db.collection('messages')
-      .findOneAndUpdate({firstName: req.body.firstName, lastName: req.body.lastName, roll: req.body.roll}, {
+      .findOneAndUpdate({firstName: req.body.oldFirstName, lastName: req.body.oldLastName, roll: req.body.oldRoll}, {
         $set: {
-          thumbUp:req.body.thumbUp + 1
+          firstName: req.body.firstName, lastName: req.body.lastName, roll: req.body.roll
         }
       }, {
         sort: {_id: -1},
